@@ -25,20 +25,26 @@ Reconstruction: Re-integrating the difference at the receiver side.
 1. Environment Setup
 We recommend using a virtual environment (Python 3.8+):
 Bash
+
 python -m venv .venv
+
 source .venv/bin/activate  # Mac/Linux
+
 .\.venv\Scripts\activate   # Windows
 
 2. Install Dependencies
 Bash
 pip install -r requirements.txt
+
 pip install pyaudio sounddevice scipy numpy librosa matplotlib streamlit 
 
 3. Run the Application
 Launch the interactive dashboard:
 
 Bash
+
 streamlit run src/app.py
+
 ## Evaluation & Metrics
 The system is tested against several key performance indicators (KPIs):
 
