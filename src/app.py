@@ -31,7 +31,7 @@ st.markdown("""
 # --- SIDEBAR  ---
 with st.sidebar:
     st.title("Settings")
-    st.info("Project: Multimedia Compression\n\nMember: Nguyen Le Quang Anh & Nguyen Dang Anh Dung")
+    st.info("Assignment 1: Developing a Low-Bitrate Speech Communication System\n\nMember: Nguyen Le Quang Anh & Nguyen Dang Anh Dung")
     
     st.divider()
     bit_depth = st.select_slider(" Target Bitrate", options=[2, 4, 6, 8], value=4, help="Số bit càng cao chất lượng càng tốt")
