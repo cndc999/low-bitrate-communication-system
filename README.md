@@ -4,16 +4,8 @@ This project implements a low-bitrate speech communication system using Differen
 
 ## Project Structure
 Organizing code into modules ensures the project is easy to maintain and scale.
+<img width="291" height="481" alt="image" src="https://github.com/user-attachments/assets/f8937d9c-217c-4b74-a061-5972ab4ac3dc" />
 
-Plaintext
-├── data/               # Sample .wav files (8kHz, 16kHz)
-├── src/
-│   ├── app.py          # Main UI (Streamlit)
-│   ├── codec_engine.py # Core DPCM & Quantization logic
-│   ├── analytics.py    # SNR & Performance metrics
-│   └── audio_io.py     # Recording & Playback handlers
-├── requirements.txt    # Project dependencies
-└── README.md           # Documentation
 ## Methodology
 The system uses a feedback-loop DPCM architecture to minimize quantization noise.
 
