@@ -4,7 +4,7 @@ import librosa.display
 import numpy as np
 
 def plot_combined_analysis(original, reconstructed, fs):
-    """Vẽ so sánh dạng sóng và phổ âm thanh[cite: 43, 70]."""
+    """Plotting Diagram[cite: 43, 70]."""
     fig, ax = plt.subplots(2, 2, figsize=(12, 8))
     
     # Waveform - Tín hiệu gốc
