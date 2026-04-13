@@ -18,16 +18,13 @@ pip install -r requirement.txt
 
 ## Execute System:
 cd src
-python main.py
+streamlit app.py
 
-## Technologies
+## Technologies & Packages
 Python 3.8+
-NumPy: 
-SoundDevice: 
-SciPy
+Pyaudio, sounddevice, scipy, numpy, librosa, matplotlib, streamlit, webrtcvad
 
 
-Plaintext
 numpy
 scipy
 sounddevice
