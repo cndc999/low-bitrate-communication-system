@@ -16,6 +16,10 @@ Performance Metrics: Built-in SNR (Signal-to-Noise Ratio) calculation for qualit
 Prepare Environment:
 pip install -r requirement.txt
 
+## Execute System:
+cd src
+python main.py
+
 ## Technologies
 Python 3.8+
 NumPy: 
