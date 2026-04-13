@@ -26,12 +26,15 @@ Reconstruction: Re-integrating the difference at the receiver side.
 We recommend using a virtual environment (Python 3.8+):
 Bash
 python -m venv .venv
+
 source .venv/bin/activate  # Mac/Linux
+
 .\.venv\Scripts\activate   # Windows
 
 2. Install Dependencies
 Bash
-pip install -r requirements.txt or pip install pyaudio sounddevice scipy numpy librosa matplotlib streamlit 
+pip install -r requirements.txt
+pip install pyaudio sounddevice scipy numpy librosa matplotlib streamlit 
 
 3. Run the Application
 Launch the interactive dashboard:
