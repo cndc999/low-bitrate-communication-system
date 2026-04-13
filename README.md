@@ -26,9 +26,7 @@ Reconstruction: Re-integrating the difference at the receiver side.
 We recommend using a virtual environment (Python 3.8+):
 Bash
 python -m venv .venv
-
 source .venv/bin/activate  # Mac/Linux
-
 .\.venv\Scripts\activate   # Windows
 
 2. Install Dependencies
