@@ -3,12 +3,12 @@ import numpy as np
 import scipy.io.wavfile as wav
 import time
 
-# Import từ các file của Thành viên A
+# Nguyen Le Quang Anh
 from codec_engine import dpcm_encode,dpcm_decode
 from vad_handler import apply_vad 
-from audio_io import record_audio  # Nếu bạn dùng chức năng ghi âm trực tiếp 
+from audio_io import record_audio  # If you are using your microphone 
 
-# Import các module phân tích của B
+# Nguyen Dang Anh Dung
 
 from analytics import calculate_snr, calculate_compression_ratio, get_quality_label
 from visualizer import plot_combined_analysis
@@ -17,10 +17,10 @@ def mock_process(audio, bits):
     levels = 2**bits
     return np.round(audio * (levels/2)) / (levels/2)
 
-# --- CẤU HÌNH TRANG ---
+# Design
 st.set_page_config(page_title="DPCM Speech System", layout="wide", initial_sidebar_state="expanded")
 
-# --- STYLE BẰNG CSS (Tùy chỉnh màu sắc nhẹ nhàng) ---
+# --- STYLE ---
 st.markdown("""
     <style>
     .main { background-color: #f5f7f9; }
@@ -28,7 +28,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# --- SIDEBAR (Khu vực điều khiển) ---
+# --- SIDEBAR  ---
 with st.sidebar:
     st.title("Settings")
     st.info("Project: Multimedia Compression\n\nMember: Nguyen Le Quang Anh & Nguyen Dang Anh Dung")
@@ -44,7 +44,7 @@ with st.sidebar:
 st.title("Low-Bitrate Speech Communication System")
 st.markdown("---")
 
-# Bước 1: Chọn nguồn dữ liệu (Upload hoặc Ghi âm)
+# Bước 1: Selecting for test (input or recording)
 st.subheader("Step 1: Input Source")
 col_up, col_rec = st.columns(2)
 
@@ -73,21 +73,21 @@ elif 'audio' in st.session_state:
     audio_to_process = st.session_state['audio']
     fs = st.session_state['fs']
 
-# Bước 2: Xử lý và hiển thị
+# Processing and Display
 if audio_to_process is not None:
     # Chuẩn hóa biên độ tín hiệu
     audio_to_process = audio_to_process / (np.max(np.abs(audio_to_process)) + 1e-9)
     
-    # 1. Chạy VAD (nếu bật)
+    # 1. VAD (If selected)
     processed_input = apply_vad(audio_to_process) if use_vad else audio_to_process
     
-    # 2. Chạy nén DPCM (Code Thành viên A)
+    # 2. DPCM Compression 
     start_time = time.time()
     encoded, step = dpcm_encode(processed_input, bit_depth)
     reconstructed = dpcm_decode(encoded, step)
     latency = (time.time() - start_time) * 1000
 
-    # 3. Hiển thị Dashboard
+    # 3. Display on Dashboard
     tab1, tab2 = st.tabs(["Performance Dashboard", "Technical Analysis"])
     
     with tab1:

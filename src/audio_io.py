@@ -3,10 +3,10 @@ import numpy as np
 from scipy.io.wavfile import read, write
 
 def record_audio(duration=3, fs=16000):
-    print(f"\n--- Đang ghi âm trong {duration} giây... ---")
+    print(f"\n--- Recording for {duration} sec... ---")
     audio = sd.rec(int(duration * fs), samplerate=fs, channels=1, dtype='float32')
     sd.wait()
-    print("Ghi âm xong.")
+    print("Recording done.")
     return audio.flatten(), fs
 
 def load_audio(path):

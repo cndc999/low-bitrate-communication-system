@@ -29,7 +29,7 @@ def main():
             print("File not found! Recording instead...")
             audio, fs = record_audio()
 
-    # Chuẩn hóa chung
+    # Normalization
     audio = audio / (np.max(np.abs(audio)) + 1e-9)
     original_clean = audio.copy()
 
