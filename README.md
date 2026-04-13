@@ -5,7 +5,7 @@ This project implements a low-bitrate speech communication system using Differen
 ## Project Structure
 Organizing code into modules ensures the project is easy to maintain and scale.
 
-Create a folder with  sub-folder: "input", "src" as the following picture here.
+Create a folder with  sub-folder: "input", "src" as the following picture here. Then, plug in all the source code provided.
 <img width="291" height="481" alt="image" src="https://github.com/user-attachments/assets/f8937d9c-217c-4b74-a061-5972ab4ac3dc" />
 
 ## Methodology
