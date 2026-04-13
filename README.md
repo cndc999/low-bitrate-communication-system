@@ -24,8 +24,3 @@ streamlit app.py
 Python 3.8+
 Pyaudio, sounddevice, scipy, numpy, librosa, matplotlib, streamlit, webrtcvad
 
-
-numpy
-scipy
-sounddevice
-numba
