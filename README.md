@@ -1,26 +1,64 @@
+Low-Bitrate Speech Communication System (DPCM)
 ## Overview
-This project implements a low-bitrate speech communication system using DPCM (Differential Pulse Code Modulation). It includes a modular architecture to handle real-time audio I/O, voice activity detection, and signal reconstruction.
+This project implements a low-bitrate speech communication system using Differential Pulse Code Modulation (DPCM). Our goal is to transmit high-quality voice data over limited bandwidth by reducing data redundancy and utilizing Voice Activity Detection (VAD).
 
-## Features
-Speech Encoding (DPCM): High-efficiency compression with a feedback loop to eliminate cumulative errors.
+## Project Structure
+Organizing code into modules ensures the project is easy to maintain and scale.
 
-Decoding: Accurate signal reconstruction from quantized bitstreams (2, 4, 6, 8-bit support).
+Plaintext
+├── data/               # Sample .wav files (8kHz, 16kHz)
+├── src/
+│   ├── app.py          # Main UI (Streamlit)
+│   ├── codec_engine.py # Core DPCM & Quantization logic
+│   ├── analytics.py    # SNR & Performance metrics
+│   └── audio_io.py     # Recording & Playback handlers
+├── requirements.txt    # Project dependencies
+└── README.md           # Documentation
+## Methodology
+The system uses a feedback-loop DPCM architecture to minimize quantization noise.
 
-VAD (Voice Activity Detection): Energy-based filtering to optimize bitrate during silent periods.
+Preprocessing: Segmenting audio into 20ms frames.
 
-Real-time Processing: Support for live microphone recording and playback.
+VAD: Skipping "silent" frames to save bandwidth.
 
-Performance Metrics: Built-in SNR (Signal-to-Noise Ratio) calculation for quality assessment.
+Encoding: Calculating the difference between the actual sample and a predicted value.
 
-## How to run
-Prepare Environment:
-pip install -r requirement.txt
+Quantization: Reducing the bit-depth (e.g., from 16-bit to 4-bit).
 
-## Execute System:
-cd src
-streamlit app.py
+Reconstruction: Re-integrating the difference at the receiver side.
 
-## Technologies & Packages
-Python 3.8+
-Pyaudio, sounddevice, scipy, numpy, librosa, matplotlib, streamlit, webrtcvad
+## Getting Started
+1. Environment Setup
+We recommend using a virtual environment (Python 3.8+):
 
+Bash
+python -m venv .venv
+source .venv/bin/activate  # Mac/Linux
+.\.venv\Scripts\activate   # Windows
+2. Install Dependencies
+Bash
+pip install -r requirements.txt or pip install pyaudio sounddevice scipy numpy librosa matplotlib streamlit 
+3. Run the Application
+Launch the interactive dashboard:
+
+Bash
+streamlit run src/app.py
+## Evaluation & Metrics
+The system is tested against several key performance indicators (KPIs):
+
+Signal-to-Noise Ratio (SNR): Quantifying the clarity of reconstructed audio.
+
+Compression Ratio: Measuring bandwidth savings (Target: 4:1 or 8:1).
+
+Spectrogram Analysis: Visual comparison of frequency loss using librosa.
+
+Latency: Measuring the delay in real-time processing mode.
+
+## Technologies
+Processing: numpy, scipy, librosa
+
+Audio I/O: pyaudio, sounddevice
+
+VAD: webrtcvad-wheels
+
+UI: streamlit, matplotlib
