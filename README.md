@@ -22,7 +22,9 @@ Reconstruction: Re-integrating the difference at the receiver side.
 
 ## Getting Started
 1. Environment Setup
+
 We recommend using a virtual environment (Python 3.12.3):
+
 Bash
 
 python -m venv .venv (If you encounter the "Keyboard Interrupt" problem, just enter the command again and it should works)
