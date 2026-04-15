@@ -3,10 +3,9 @@ Low-Bitrate Speech Communication System (DPCM)
 This project implements a low-bitrate speech communication system using Differential Pulse Code Modulation (DPCM). Our goal is to transmit high-quality voice data over limited bandwidth by reducing data redundancy and utilizing Voice Activity Detection (VAD).
 
 ## Project Structure
-Organizing code into modules ensures the project is easy to maintain and scale.
-
-Create a folder with  sub-folder: "input", "src" as the following picture here. Then, plug in all the source code provided.
 <img width="291" height="481" alt="image" src="https://github.com/user-attachments/assets/f8937d9c-217c-4b74-a061-5972ab4ac3dc" />
+
+We recommend using GitHub Desktop to download and execute the project to ensure optimal performance and minimize potential issues. For further guidance, please refer to the demo video, which provides detailed installation instructions.
 
 ## Methodology
 The system uses a feedback-loop DPCM architecture to minimize quantization noise.
@@ -23,7 +22,7 @@ Reconstruction: Re-integrating the difference at the receiver side.
 
 ## Getting Started
 1. Environment Setup
-We recommend using a virtual environment (Python 3.8+):
+We recommend using a virtual environment (Python 3.12.3):
 Bash
 
 python -m venv .venv
@@ -42,8 +41,8 @@ pip install pyaudio sounddevice scipy numpy librosa matplotlib streamlit
 Launch the interactive dashboard:
 
 Bash
-
-streamlit run src/app.py
+cd src
+streamlit run app.py
 
 ## Evaluation & Metrics
 The system is tested against several key performance indicators (KPIs):
