@@ -25,7 +25,7 @@ Reconstruction: Re-integrating the difference at the receiver side.
 We recommend using a virtual environment (Python 3.12.3):
 Bash
 
-python -m venv .venv
+python -m venv .venv (If you encounter the "Keyboard Interupted" problem, just enter the command again and it should works)
 
 source .venv/bin/activate  # Mac/Linux
 
