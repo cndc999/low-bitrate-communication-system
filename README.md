@@ -32,7 +32,9 @@ source .venv/bin/activate  # Mac/Linux
 \.venv\Scripts\activate   # Windows
 
 2. Install Dependencies
+
 Bash
+
 pip install -r requirements.txt
 
 pip install pyaudio sounddevice scipy numpy librosa matplotlib streamlit (If the command above doesn't work)
@@ -41,7 +43,9 @@ pip install pyaudio sounddevice scipy numpy librosa matplotlib streamlit (If the
 Launch the interactive dashboard:
 
 Bash
+
 cd src
+
 streamlit run app.py
 
 ## Evaluation & Metrics
