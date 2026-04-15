@@ -35,7 +35,7 @@ source .venv/bin/activate  # Mac/Linux
 Bash
 pip install -r requirements.txt
 
-pip install pyaudio sounddevice scipy numpy librosa matplotlib streamlit 
+pip install pyaudio sounddevice scipy numpy librosa matplotlib streamlit (If the command above doesn't work)
 
 3. Run the Application
 Launch the interactive dashboard:
