@@ -39,7 +39,17 @@ pip install -r requirements.txt
 
 pip install pyaudio sounddevice scipy numpy librosa matplotlib streamlit (If the command above doesn't work)
 
-3. Run the Application
+
+3. How to obtain Dataset and Data Sources 
+
+Custom Dataset: Real-life speech captured directly via microphone.
+
+Standard Samples: Audio files (.wav) collected from online sources.
+
+Dataset and sample audio file have been included in our Github repository. By cloning or downloading the repository, users will have access to all the necessary data for running the project.
+
+
+4. Run the Application
 Launch the interactive dashboard:
 
 Bash
