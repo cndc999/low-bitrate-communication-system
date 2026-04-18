@@ -40,9 +40,11 @@ python -m venv .venv
 ```
 (If you encounter the "Keyboard Interrupt" problem, just enter the command again and it should works)
 ### Activate the Virtual Environment
+For Linux
 ```
 source .venv/bin/activate
-```  
+```
+For Windows
 ```
 .venv\Scripts\activate
 ```
