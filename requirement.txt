@@ -1,1 +1,7 @@
-pip install pyaudio sounddevice scipy numpy librosa matplotlib streamlit 
+pyaudio
+sounddevice
+scipy
+numpy
+librosa
+matplotlib
+streamlit
