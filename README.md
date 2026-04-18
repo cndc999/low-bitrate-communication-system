@@ -53,7 +53,6 @@ pip install -r requirements.txt
 ```
 pip install pyaudio sounddevice scipy numpy librosa matplotlib streamlit
 ``` 
-(If the command above doesn't work)
 
 ### How to Run 
 Launch the interactive dashboard:
