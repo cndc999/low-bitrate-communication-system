@@ -29,7 +29,7 @@ This project implements a low-bitrate speech communication system using Differen
 ## Installation & Setup 
 ### Clone the Repository 
 
-We recommend using a virtual environment (Python 3.12.3):
+We recommend using a virtual environment (with Python 3.12.3):
 ```
 git clone https://github.com/cndc999/low-bitrate-communication-system
 cd <project-folder>
