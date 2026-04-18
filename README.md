@@ -5,7 +5,7 @@ This project implements a low-bitrate speech communication system using Differen
 ## Key Features
 
 - **Signal-to-Noise Ratio (SNR)**: Quantifying the clarity of reconstructed audio.
-- **Compression Ratio**: Measuring bandwidth savings (Target: 4:1 or 8:1).
+- **Compression Ratio**: Measuring bandwidth savings.
 - **Spectrogram Analysis**: Visual comparison of frequency loss using librosa.
 - **Latency**: Measuring the delay in real-time processing mode.
 
