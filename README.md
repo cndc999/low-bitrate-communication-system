@@ -63,7 +63,7 @@ The system is tested against several key performance indicators (KPIs):
 
 Signal-to-Noise Ratio (SNR): Quantifying the clarity of reconstructed audio.
 
-Compression Ratio: Measuring bandwidth savings (Target: 4:1 or 8:1).
+Compression Ratio: Measuring bandwidth savings.
 
 Spectrogram Analysis: Visual comparison of frequency loss using librosa.
 
