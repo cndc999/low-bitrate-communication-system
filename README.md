@@ -10,8 +10,8 @@ This project implements a low-bitrate speech communication system using Differen
 - **Latency**: Measuring the delay in real-time processing mode.
 
 ## Folder Structure
-Project
-
+```Project
+.
 ├── input/                 # Input audio files
 
 ├── src/
@@ -22,15 +22,10 @@ Project
 │   ├── codec_engine.py    # Encoding/decoding logic (DPCM)
 │   ├── vad_handler.py     # Voice Activity Detection processing
 │   ├── visualizer.py      # Plotting and visualization tools
-
 ├── .venv/                 # Virtual environment
-
-├── .gitignore             # Git ignore rules
-
 ├── requirement.txt        # Project dependencies
-
 ├── README.md              # Project documentation
-
+```
 ## Installation & Setup 
 ### Clone the Repository 
 
