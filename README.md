@@ -2,78 +2,70 @@ Low-Bitrate Speech Communication System (DPCM)
 ## Overview
 This project implements a low-bitrate speech communication system using Differential Pulse Code Modulation (DPCM). Our goal is to transmit high-quality voice data over limited bandwidth by reducing data redundancy and utilizing Voice Activity Detection (VAD).
 
-## Project Structure
-<img width="291" height="481" alt="image" src="https://github.com/user-attachments/assets/f8937d9c-217c-4b74-a061-5972ab4ac3dc" />
+## Key Features
 
-We recommend using GitHub Desktop to download and execute the project to ensure optimal performance and minimize potential issues. For further guidance, please refer to the demo video, which provides detailed installation instructions.
+- **Signal-to-Noise Ratio (SNR)**: Quantifying the clarity of reconstructed audio.
+- **Compression Ratio**: Measuring bandwidth savings (Target: 4:1 or 8:1).
+- **Spectrogram Analysis**: Visual comparison of frequency loss using librosa.
+- **Latency**: Measuring the delay in real-time processing mode.
 
-## Methodology
-The system uses a feedback-loop DPCM architecture to minimize quantization noise.
+## Folder Structure
+Project
 
-Preprocessing: Segmenting audio into 20ms frames.
+├── input/                 # Input audio files
 
-VAD: Skipping "silent" frames to save bandwidth.
+├── src/
+│   ├── __init__.py        # Package initializer
+│   ├── app.py             # Main Streamlit UI application
+│   ├── analytics.py       # Metrics calculation (SNR, compression ratio, quality)
+│   ├── audio_io.py        # Audio input/output handling (record, read, write)
+│   ├── codec_engine.py    # Encoding/decoding logic (DPCM)
+│   ├── vad_handler.py     # Voice Activity Detection processing
+│   ├── visualizer.py      # Plotting and visualization tools
 
-Encoding: Calculating the difference between the actual sample and a predicted value.
+├── .venv/                 # Virtual environment
 
-Reconstruction: Re-integrating the difference at the receiver side.
+├── .gitignore             # Git ignore rules
 
-## Getting Started
-1. Environment Setup
+├── requirement.txt        # Project dependencies
+
+├── README.md              # Project documentation
+
+## Installation & Setup 
+### Clone the Repository 
 
 We recommend using a virtual environment (Python 3.12.3):
-
-Bash
-
-python -m venv .venv (If you encounter the "Keyboard Interrupt" problem, just enter the command again and it should works)
-
-source .venv/bin/activate  # Mac/Linux
-
-\.venv\Scripts\activate   # Windows
-
-2. Install Dependencies
-
-Bash
-
+```
+git clone https://github.com/cndc999/low-bitrate-communication-system
+cd <project-folder>
+```
+### Create a Virtual Environment
+```
+python -m venv .venv 
+```
+(If you encounter the "Keyboard Interrupt" problem, just enter the command again and it should works)
+### Activate the Virtual Environment
+```
+source .venv/bin/activate
+```  
+```
+\.venv\Scripts\activate
+```
+### Install Dependencies
+```
 pip install -r requirements.txt
+```
+```
+pip install pyaudio sounddevice scipy numpy librosa matplotlib streamlit
+``` 
+(If the command above doesn't work)
 
-pip install pyaudio sounddevice scipy numpy librosa matplotlib streamlit (If the command above doesn't work)
-
-
-3. How to obtain Dataset and Data Sources 
-
-Custom Dataset: Real-life speech captured directly via microphone.
-
-Standard Samples: Audio files (.wav) collected from online sources.
-
-Dataset and sample audio file have been included in our Github repository. By cloning or downloading the repository, users will have access to all the necessary data for running the project.
-
-
-4. Run the Application
+### How to Run 
 Launch the interactive dashboard:
-
-Bash
-
+```
 cd src
-
 streamlit run app.py
+```
 
-## Evaluation & Metrics
-The system is tested against several key performance indicators (KPIs):
 
-Signal-to-Noise Ratio (SNR): Quantifying the clarity of reconstructed audio.
 
-Compression Ratio: Measuring bandwidth savings.
-
-Spectrogram Analysis: Visual comparison of frequency loss using librosa.
-
-Latency: Measuring the delay in real-time processing mode.
-
-## Technologies
-Processing: numpy, scipy, librosa
-
-Audio I/O: pyaudio, sounddevice
-
-VAD: webrtcvad-wheels
-
-UI: streamlit, matplotlib
