@@ -16,8 +16,6 @@ VAD: Skipping "silent" frames to save bandwidth.
 
 Encoding: Calculating the difference between the actual sample and a predicted value.
 
-Quantization: Reducing the bit-depth (e.g., from 16-bit to 4-bit).
-
 Reconstruction: Re-integrating the difference at the receiver side.
 
 ## Getting Started
