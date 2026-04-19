@@ -19,7 +19,7 @@ def calculate_compression_ratio(original_bits, target_bits):
     return original_bits / target_bits if target_bits > 0 else 0
 
 def get_quality_label(snr):
-    """Đánh giá chất lượng cảm tính."""
+    """Evaluate Perceptual Quality."""
     if snr > 15: return "Good"
     if snr > 5: return "Average"
     return "Bad"
